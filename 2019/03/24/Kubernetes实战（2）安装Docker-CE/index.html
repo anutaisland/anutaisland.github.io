@@ -6,54 +6,32 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://anutaisland.github.io">
-  <title>Kubernetes实战（1）安装CentOS | 南村拓哉的博客</title>
+  <title>Kubernetes实战（2）安装Docker-CE | 南村拓哉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装CentOS">
+  <meta name="description" content="最佳实践从官方文档开始">
 <meta name="keywords" content="kubernetes,docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kubernetes实战（1）安装CentOS">
-<meta property="og:url" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/index.html">
+<meta property="og:title" content="Kubernetes实战（2）安装Docker-CE">
+<meta property="og:url" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/index.html">
 <meta property="og:site_name" content="南村拓哉的博客">
-<meta property="og:description" content="安装CentOS">
+<meta property="og:description" content="最佳实践从官方文档开始">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/1.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/2.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/3.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/4.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/5.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/6.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/7.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/8.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/9.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/10.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/11.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/12.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/13.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/14.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/15.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/16.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/17.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/18.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/19.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/20.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/21.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/22.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/23.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/24.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/25.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/26.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/27.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/28.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/29.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/30.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/31.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/32.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/33.png">
-<meta property="og:updated_time" content="2019-03-24T11:10:45.281Z">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/0.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/01.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/02.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/1.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/2.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/3.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/4.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/5.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/6.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/7.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/8.png">
+<meta property="og:updated_time" content="2019-03-24T11:16:08.731Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kubernetes实战（1）安装CentOS">
-<meta name="twitter:description" content="安装CentOS">
-<meta name="twitter:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/1.png">
+<meta name="twitter:title" content="Kubernetes实战（2）安装Docker-CE">
+<meta name="twitter:description" content="最佳实践从官方文档开始">
+<meta name="twitter:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/0.png">
   
     <link rel="alternative" href="/atom.xml" title="南村拓哉的博客" type="application/atom+xml">
   
@@ -173,20 +151,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Kubernetes实战（1）安装CentOS" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Kubernetes实战（2）安装Docker-CE" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Kubernetes实战（1）安装CentOS
+      Kubernetes实战（2）安装Docker-CE
     </h1>
   
 
         
-        <a href="/2019/03/24/Kubernetes实战（1）安装CentOS/" class="archive-article-date">
-  	<time datetime="2019-03-24T05:49:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
+        <a href="/2019/03/24/Kubernetes实战（2）安装Docker-CE/" class="archive-article-date">
+  	<time datetime="2019-03-24T10:19:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
 </a>
         
       </header>
@@ -194,42 +172,30 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>安装CentOS</p>
+<p>最佳实践从官方文档开始</p>
 </blockquote>
 <a id="more"></a>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/1.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/2.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/3.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/4.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/5.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/6.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/7.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/8.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/9.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/10.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/11.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/12.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/13.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/14.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/15.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/16.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/17.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/18.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/19.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/20.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/21.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/22.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/23.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/24.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/25.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/26.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/27.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/28.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/29.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/30.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/31.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/32.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/33.png" alt></p>
+<h1 id="官网"><a href="#官网" class="headerlink" title="官网"></a>官网</h1><h2 id="docker"><a href="#docker" class="headerlink" title="docker"></a><a href="http://www.docker.com" target="_blank" rel="noopener">docker</a></h2><p><img src="/2019/03/24/Kubernetes实战（2）安装Docker-CE/0.png" alt></p>
+<h2 id="docker-hub"><a href="#docker-hub" class="headerlink" title="docker hub"></a><a href="http://hub.docker.com" target="_blank" rel="noopener">docker hub</a></h2><p><img src="/2019/03/24/Kubernetes实战（2）安装Docker-CE/01.png" alt></p>
+<h3 id="docker-docs"><a href="#docker-docs" class="headerlink" title="docker docs"></a><a href="https://docs.docker.com/install/linux/docker-ce/centos/" target="_blank" rel="noopener">docker docs</a></h3><p><img src="/2019/03/24/Kubernetes实战（2）安装Docker-CE/02.png" alt></p>
+<h1 id="安装Docker-CE"><a href="#安装Docker-CE" class="headerlink" title="安装Docker-CE"></a>安装Docker-CE</h1><h2 id="1、切换root用户"><a href="#1、切换root用户" class="headerlink" title="1、切换root用户"></a>1、切换root用户</h2><p><img src="/2019/03/24/Kubernetes实战（2）安装Docker-CE/1.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[lilinian@localhost ~]$ su</span><br><span class="line">密码：</span><br><span class="line">[root@localhost lilinian]<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<h2 id="2、删除旧版docker"><a href="#2、删除旧版docker" class="headerlink" title="2、删除旧版docker"></a>2、删除旧版docker</h2><p><img src="/2019/03/24/Kubernetes实战（2）安装Docker-CE/2.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># yum remove docker  docker-client   docker-client-latest  docker-common docker-latest  docker-latest-logrotate     docker-logrotate    docker-engine</span></span><br><span class="line">已加载插件：fastestmirror, langpacks</span><br><span class="line">参数 docker 没有匹配</span><br><span class="line">参数 docker-client 没有匹配</span><br><span class="line">参数 docker-client-latest 没有匹配</span><br><span class="line">参数 docker-common 没有匹配</span><br><span class="line">参数 docker-latest 没有匹配</span><br><span class="line">参数 docker-latest-logrotate 没有匹配</span><br><span class="line">参数 docker-logrotate 没有匹配</span><br><span class="line">参数 docker-engine 没有匹配</span><br><span class="line">不删除任何软件包</span><br><span class="line">[root@localhost lilinian]<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<h2 id="3、安装必须的软件包"><a href="#3、安装必须的软件包" class="headerlink" title="3、安装必须的软件包"></a>3、安装必须的软件包</h2><p>安装<a href="https://www.baidu.com/s?wd=yum&amp;tn=24004469_oem_dg&amp;rsv_dl=gh_pl_sl_csd" target="_blank" rel="noopener">yum</a>-utils，它提供一个yum-config-manager单元，同时安装的device-mapper-persistent-data和<a href="https://www.baidu.com/s?wd=lvm2&amp;tn=24004469_oem_dg&amp;rsv_dl=gh_pl_sl_csd" target="_blank" rel="noopener">lvm2</a>用于储存设备映射（devicemapper）必须的两个软件包。</p>
+<p><img src="/2019/03/24/Kubernetes实战（2）安装Docker-CE/3.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># yum install -y yum-utils device-mapper-persistent-data lvm2</span></span><br><span class="line">[root@localhost lilinian]<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<h2 id="4、配置一个稳定（stable）的仓库"><a href="#4、配置一个稳定（stable）的仓库" class="headerlink" title="4、配置一个稳定（stable）的仓库"></a>4、配置一个稳定（stable）的仓库</h2><p>仓库配置会保存到/etc/yum.repos.d/docker-ce.repo文件中。</p>
+<p><img src="/2019/03/24/Kubernetes实战（2）安装Docker-CE/4.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># yum-config-manager  --add-repo   https://download.docker.com/linux/centos/docker-ce.repo</span></span><br><span class="line">已加载插件：fastestmirror, langpacks</span><br><span class="line">adding repo from: https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">grabbing file https://download.docker.com/linux/centos/docker-ce.repo to /etc/yum.repos.d/docker-ce.repo</span><br><span class="line">repo saved to /etc/yum.repos.d/docker-ce.repo</span><br><span class="line">[root@localhost lilinian]<span class="comment"># ll /etc/yum.repos.d</span></span><br><span class="line">总用量 36</span><br><span class="line">-rw-r--r--. 1 root root 1664 11月 23 21:16 CentOS-Base.repo</span><br><span class="line">-rw-r--r--. 1 root root 1309 11月 23 21:16 CentOS-CR.repo</span><br><span class="line">-rw-r--r--. 1 root root  649 11月 23 21:16 CentOS-Debuginfo.repo</span><br><span class="line">-rw-r--r--. 1 root root  314 11月 23 21:16 CentOS-fasttrack.repo</span><br><span class="line">-rw-r--r--. 1 root root  630 11月 23 21:16 CentOS-Media.repo</span><br><span class="line">-rw-r--r--. 1 root root 1331 11月 23 21:16 CentOS-Sources.repo</span><br><span class="line">-rw-r--r--. 1 root root 5701 11月 23 21:16 CentOS-Vault.repo</span><br><span class="line">-rw-r--r--. 1 root root 2424 10月 25 01:22 docker-ce.repo</span><br><span class="line">[root@localhost lilinian]<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<h2 id="5、安装dokcer-ce"><a href="#5、安装dokcer-ce" class="headerlink" title="5、安装dokcer-ce"></a>5、安装dokcer-ce</h2><p><img src="/2019/03/24/Kubernetes实战（2）安装Docker-CE/5.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># yum install docker-ce docker-ce-cli containerd.io</span></span><br></pre></td></tr></table></figure>
+<h2 id="6、启动dokcer-ce"><a href="#6、启动dokcer-ce" class="headerlink" title="6、启动dokcer-ce"></a>6、启动dokcer-ce</h2><p><img src="/2019/03/24/Kubernetes实战（2）安装Docker-CE/6.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># systemctl start docker</span></span><br><span class="line">[root@localhost lilinian]<span class="comment"># docker info</span></span><br></pre></td></tr></table></figure>
+<h2 id="7、设置开机启动dokcer-ce"><a href="#7、设置开机启动dokcer-ce" class="headerlink" title="7、设置开机启动dokcer-ce"></a>7、设置开机启动dokcer-ce</h2><p><img src="/2019/03/24/Kubernetes实战（2）安装Docker-CE/7.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># systemctl start docker</span></span><br><span class="line">[root@localhost lilinian]<span class="comment"># systemctl enable docker.service</span></span><br></pre></td></tr></table></figure>
+<h2 id="8、hello-world"><a href="#8、hello-world" class="headerlink" title="8、hello world"></a>8、hello world</h2><p><img src="/2019/03/24/Kubernetes实战（2）安装Docker-CE/8.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># docker pull hello-world</span></span><br><span class="line">[root@localhost lilinian]<span class="comment"># docker run hello-world</span></span><br><span class="line"></span><br><span class="line">Hello from Docker!</span><br><span class="line">This message shows that your installation appears to be working correctly.</span><br><span class="line"></span><br><span class="line">To generate this message, Docker took the following steps:</span><br><span class="line"> 1. The Docker client contacted the Docker daemon.</span><br><span class="line"> 2. The Docker daemon pulled the <span class="string">"hello-world"</span> image from the Docker Hub.</span><br><span class="line">    (amd64)</span><br><span class="line"> 3. The Docker daemon created a new container from that image <span class="built_in">which</span> runs the</span><br><span class="line">    executable that produces the output you are currently reading.</span><br><span class="line"> 4. The Docker daemon streamed that output to the Docker client, <span class="built_in">which</span> sent it</span><br><span class="line">    to your terminal.</span><br><span class="line"></span><br><span class="line">To try something more ambitious, you can run an Ubuntu container with:</span><br><span class="line"> $ docker run -it ubuntu bash</span><br><span class="line"></span><br><span class="line">Share images, automate workflows, and more with a free Docker ID:</span><br><span class="line"> https://hub.docker.com/</span><br></pre></td></tr></table></figure>
 
       
 
@@ -335,7 +301,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://anutaisland.github.io/2019/03/24/Kubernetes实战（2）安装Docker-CE/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -349,18 +315,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/24/Kubernetes实战（2）安装Docker-CE/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/03/24/Kubernetes实战（3）安装Kubernetes/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Kubernetes实战（2）安装Docker-CE
+          Kubernetes实战（3）安装Kubernetes
         
       </div>
     </a>
   
   
-    <a href="/2019/03/24/Kubernetes实战-提纲/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Kubernetes实战-提纲</div>
+    <a href="/2019/03/24/Kubernetes实战（1）安装CentOS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Kubernetes实战（1）安装CentOS</div>
       <i class="icon-circle-right"></i>
     </a>
   

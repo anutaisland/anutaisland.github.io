@@ -6,54 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://anutaisland.github.io">
-  <title>Kubernetes实战（1）安装CentOS | 南村拓哉的博客</title>
+  <title>Kubernetes实战（3）安装Kubernetes | 南村拓哉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装CentOS">
+  <meta name="description" content="安装 kubeadm, kubelet 和 kubectl">
 <meta name="keywords" content="kubernetes,docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Kubernetes实战（1）安装CentOS">
-<meta property="og:url" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/index.html">
+<meta property="og:title" content="Kubernetes实战（3）安装Kubernetes">
+<meta property="og:url" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（3）安装Kubernetes/index.html">
 <meta property="og:site_name" content="南村拓哉的博客">
-<meta property="og:description" content="安装CentOS">
+<meta property="og:description" content="安装 kubeadm, kubelet 和 kubectl">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/1.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/2.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/3.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/4.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/5.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/6.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/7.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/8.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/9.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/10.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/11.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/12.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/13.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/14.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/15.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/16.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/17.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/18.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/19.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/20.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/21.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/22.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/23.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/24.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/25.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/26.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/27.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/28.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/29.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/30.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/31.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/32.png">
-<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/33.png">
-<meta property="og:updated_time" content="2019-03-24T11:10:45.281Z">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（3）安装Kubernetes/1.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（3）安装Kubernetes/2.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（3）安装Kubernetes/3.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（3）安装Kubernetes/4.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（3）安装Kubernetes/5.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（3）安装Kubernetes/6.png">
+<meta property="og:updated_time" content="2019-03-24T15:21:20.406Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kubernetes实战（1）安装CentOS">
-<meta name="twitter:description" content="安装CentOS">
-<meta name="twitter:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/1.png">
+<meta name="twitter:title" content="Kubernetes实战（3）安装Kubernetes">
+<meta name="twitter:description" content="安装 kubeadm, kubelet 和 kubectl">
+<meta name="twitter:image" content="http://anutaisland.github.io/2019/03/24/Kubernetes实战（3）安装Kubernetes/1.png">
   
     <link rel="alternative" href="/atom.xml" title="南村拓哉的博客" type="application/atom+xml">
   
@@ -173,20 +146,20 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Kubernetes实战（1）安装CentOS" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Kubernetes实战（3）安装Kubernetes" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Kubernetes实战（1）安装CentOS
+      Kubernetes实战（3）安装Kubernetes
     </h1>
   
 
         
-        <a href="/2019/03/24/Kubernetes实战（1）安装CentOS/" class="archive-article-date">
-  	<time datetime="2019-03-24T05:49:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
+        <a href="/2019/03/24/Kubernetes实战（3）安装Kubernetes/" class="archive-article-date">
+  	<time datetime="2019-03-24T14:30:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
 </a>
         
       </header>
@@ -194,42 +167,33 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>安装CentOS</p>
+<p>安装 kubeadm, kubelet 和 kubectl</p>
 </blockquote>
 <a id="more"></a>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/1.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/2.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/3.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/4.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/5.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/6.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/7.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/8.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/9.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/10.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/11.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/12.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/13.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/14.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/15.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/16.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/17.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/18.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/19.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/20.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/21.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/22.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/23.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/24.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/25.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/26.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/27.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/28.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/29.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/30.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/31.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/32.png" alt></p>
-<p><img src="/2019/03/24/Kubernetes实战（1）安装CentOS/33.png" alt></p>
+<p>您需要在每台机器上都安装以下的软件包：</p>
+<p>kubeadm: 用来初始化集群的指令。</p>
+<p>kubelet: 在集群中的每个节点上用来启动 pod 和 container 等。</p>
+<p>kubectl: 用来与集群通信的命令行工具。</p>
+<p>kubeadm 不能帮您安装或管理 kubelet 或 kubectl ，所以您得保证他们满足通过 kubeadm 安装的 Kubernetes 控制层对版本的要求。如果版本没有满足要求，就有可能导致一些难以想到的错误或问题。然而控制层与 kubelet 间的 小版本号 不一致无伤大雅，不过请记住 kubelet 的版本不可以超过 API server 的版本。例如 1.8.0 的 API server 可以适配 1.7.0 的 kubelet，反之就不行了。</p>
+<h1 id="1、增加k8s官网yum源"><a href="#1、增加k8s官网yum源" class="headerlink" title="1、增加k8s官网yum源"></a>1、增加k8s官网yum源</h1><p><img src="/2019/03/24/Kubernetes实战（3）安装Kubernetes/1.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=1</span><br><span class="line">repo_gpgcheck=1</span><br><span class="line">gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg</span><br><span class="line">exclude=kube*</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">[root@localhost lilinian]# ll /etc/yum.repos.d/</span><br><span class="line"></span><br><span class="line">总用量 40</span><br><span class="line">-rw-r--r--. 1 root root 1664 11月 23 21:16 CentOS-Base.repo</span><br><span class="line">-rw-r--r--. 1 root root 1309 11月 23 21:16 CentOS-CR.repo</span><br><span class="line">-rw-r--r--. 1 root root  649 11月 23 21:16 CentOS-Debuginfo.repo</span><br><span class="line">-rw-r--r--. 1 root root  314 11月 23 21:16 CentOS-fasttrack.repo</span><br><span class="line">-rw-r--r--. 1 root root  630 11月 23 21:16 CentOS-Media.repo</span><br><span class="line">-rw-r--r--. 1 root root 1331 11月 23 21:16 CentOS-Sources.repo</span><br><span class="line">-rw-r--r--. 1 root root 5701 11月 23 21:16 CentOS-Vault.repo</span><br><span class="line">-rw-r--r--. 1 root root 2424 10月 25 01:22 docker-ce.repo</span><br><span class="line">-rw-r--r--. 1 root root  286 3月  16 10:15 kubernetes.repo</span><br><span class="line">[root@localhost lilinian]#</span><br></pre></td></tr></table></figure>
+<h1 id="2、禁用SELinux"><a href="#2、禁用SELinux" class="headerlink" title="2、禁用SELinux"></a>2、禁用SELinux</h1><p><img src="/2019/03/24/Kubernetes实战（3）安装Kubernetes/2.png" alt></p>
+<p>请注意：</p>
+<p>- 通过命令 setenforce 0 和 sed … 可以将 SELinux 设置为 permissive 模式(将其禁用)。 只有执行这一操作之后，容器才能访问宿主的文件系统，进而能够正常使用 Pod 网络。您必须这么做，直到 kubelet 做出升级支持 SELinux 为止。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># setenforce 0</span></span><br><span class="line">[root@localhost lilinian]<span class="comment"># sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config</span></span><br><span class="line">[root@localhost lilinian]<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<h1 id="3、从官网yum源安装kubelet-kubeadm-kubectl"><a href="#3、从官网yum源安装kubelet-kubeadm-kubectl" class="headerlink" title="3、从官网yum源安装kubelet kubeadm kubectl"></a>3、从官网yum源安装kubelet kubeadm kubectl</h1><p><img src="/2019/03/24/Kubernetes实战（3）安装Kubernetes/3.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes</span></span><br><span class="line"></span><br><span class="line">[https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/repomd.xml: [Errno 14] curl<span class="comment">#7 - "Failed to connect to 2404:6800:4005:810::200e: 网络不可达"</span></span><br><span class="line">正在尝试其它镜像。</span><br><span class="line">https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/repomd.xml: [Errno 14] curl<span class="comment">#7 - "Failed to connect to 2404:6800:4005:810::200e: 网络不可达"</span></span><br><span class="line">正在尝试其它镜像。</span><br><span class="line">https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/repomd.xml: [Errno 14] curl<span class="comment">#7 - "Failed to connect to 2404:6800:4005:810::200e: 网络不可达"</span></span><br><span class="line">正在尝试其它镜像。</span><br><span class="line">https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/repomd.xml: [Errno 14] curl<span class="comment">#7 - "Failed to connect to 2404:6800:4005:810::200e: 网络不可达"</span></span><br><span class="line">正在尝试其它镜像。</span><br><span class="line">^Chttps://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64/repodata/repomd.xml: [Errno 14] curl<span class="comment">#56 - "Callback aborted"</span></span><br><span class="line">正在尝试其它镜像。</span><br></pre></td></tr></table></figure>
+<h1 id="4、使用阿里yum源"><a href="#4、使用阿里yum源" class="headerlink" title="4、使用阿里yum源"></a>4、使用阿里yum源</h1><p><img src="/2019/03/24/Kubernetes实战（3）安装Kubernetes/4.png" alt></p>
+<p>修改：</p>
+<p>/etc/yum.repos.d/kubernetes.repo</p>
+<p>内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[kubernetes]</span><br><span class="line"></span><br><span class="line">name=Kubernetes</span><br><span class="line"></span><br><span class="line">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64</span><br><span class="line"></span><br><span class="line">enabled=1</span><br><span class="line"></span><br><span class="line">gpgcheck=0</span><br></pre></td></tr></table></figure>
+<h1 id="5、从阿里yum源安装kubelet-kubeadm-kubectl"><a href="#5、从阿里yum源安装kubelet-kubeadm-kubectl" class="headerlink" title="5、从阿里yum源安装kubelet kubeadm kubectl"></a>5、从阿里yum源安装kubelet kubeadm kubectl</h1><p><img src="/2019/03/24/Kubernetes实战（3）安装Kubernetes/5.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes</span></span><br><span class="line"></span><br><span class="line">已安装:</span><br><span class="line">  kubeadm.x86_64 0:1.13.4-0 kubectl.x86_64 0:1.13.4-0 kubelet.x86_64 0:1.13.4-0</span><br><span class="line"></span><br><span class="line">作为依赖被安装:</span><br><span class="line">  conntrack-tools.x86_64 0:1.4.4-4.el7                                          </span><br><span class="line">  cri-tools.x86_64 0:1.12.0-0                                                   </span><br><span class="line">  kubernetes-cni.x86_64 0:0.6.0-0                                               </span><br><span class="line">  libnetfilter_cthelper.x86_64 0:1.0.0-9.el7                                    </span><br><span class="line">  libnetfilter_cttimeout.x86_64 0:1.0.0-6.el7                                   </span><br><span class="line">  libnetfilter_queue.x86_64 0:1.0.2-2.el7_2                                     </span><br><span class="line">  socat.x86_64 0:1.7.3.2-2.el7                                                  </span><br><span class="line"></span><br><span class="line">完毕！</span><br></pre></td></tr></table></figure>
+<h1 id="6、启动kubelet"><a href="#6、启动kubelet" class="headerlink" title="6、启动kubelet"></a>6、启动kubelet</h1><p><img src="/2019/03/24/Kubernetes实战（3）安装Kubernetes/6.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># systemctl enable kubelet &amp;&amp; systemctl start kubelet</span></span><br><span class="line"></span><br><span class="line">Created symlink from /etc/systemd/system/multi-user.target.wants/kubelet.service to /etc/systemd/system/kubelet.service.</span><br><span class="line"></span><br><span class="line">[root@localhost lilinian]<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<h1 id="7、克隆VM"><a href="#7、克隆VM" class="headerlink" title="7、克隆VM"></a>7、克隆VM</h1><p>克隆一份当前CentOS虚拟机，用于部署NODE节点</p>
+<p>当前CentOS虚拟机，用于部署Master节点</p>
 
       
 
@@ -335,7 +299,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://anutaisland.github.io/2019/03/24/Kubernetes实战（1）安装CentOS/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://anutaisland.github.io/2019/03/24/Kubernetes实战（3）安装Kubernetes/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -349,18 +313,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/24/Kubernetes实战（2）安装Docker-CE/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Kubernetes实战（2）安装Docker-CE
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/24/Kubernetes实战-提纲/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Kubernetes实战-提纲</div>
+    <a href="/2019/03/24/Kubernetes实战（2）安装Docker-CE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Kubernetes实战（2）安装Docker-CE</div>
       <i class="icon-circle-right"></i>
     </a>
   
