@@ -6,15 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://anutaisland.github.io">
-  <title>Tag: kubernetes | 南村拓哉的博客</title>
+  <title>Kubernetes实战（6）部署Node节点 | 南村拓哉的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="南村拓哉的博客">
-<meta property="og:url" content="http://anutaisland.github.io/tags/kubernetes/index.html">
+  <meta name="description" content="部署Node节点">
+<meta name="keywords" content="kubernetes,docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kubernetes实战（6）部署Node节点">
+<meta property="og:url" content="http://anutaisland.github.io/2019/03/26/Kubernetes实战（6）部署Node节点/index.html">
 <meta property="og:site_name" content="南村拓哉的博客">
+<meta property="og:description" content="部署Node节点">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/26/Kubernetes实战（6）部署Node节点/1.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/26/Kubernetes实战（6）部署Node节点/2.png">
+<meta property="og:image" content="http://anutaisland.github.io/2019/03/26/Kubernetes实战（6）部署Node节点/3.png">
+<meta property="og:updated_time" content="2019-03-26T06:21:50.429Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="南村拓哉的博客">
+<meta name="twitter:title" content="Kubernetes实战（6）部署Node节点">
+<meta name="twitter:description" content="部署Node节点">
+<meta name="twitter:image" content="http://anutaisland.github.io/2019/03/26/Kubernetes实战（6）部署Node节点/1.png">
   
     <link rel="alternative" href="/atom.xml" title="南村拓哉的博客" type="application/atom+xml">
   
@@ -134,89 +143,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Kubernetes实战（6）部署Node节点" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/26/Kubernetes实战（7）发布应用/" class="archive-article-date">
-  	<time datetime="2019-03-26T06:23:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/26/Kubernetes实战（7）发布应用/">Kubernetes实战（7）发布应用</a>
+    <h1 class="article-title" itemprop="name">
+      Kubernetes实战（6）部署Node节点
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">kubernetes</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/从单体到容器-互联网架构演化之路//" class="article-tag-list-link color2">从单体到容器-互联网架构演化之路</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/26/Kubernetes实战（6）部署Node节点/" class="archive-article-date">
+        
+        <a href="/2019/03/26/Kubernetes实战（6）部署Node节点/" class="archive-article-date">
   	<time datetime="2019-03-26T05:56:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-26</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/26/Kubernetes实战（6）部署Node节点/">Kubernetes实战（6）部署Node节点</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>部署Node节点</p>
+</blockquote>
+<a id="more"></a>
+<h1 id="1-获取master节点token"><a href="#1-获取master节点token" class="headerlink" title="1. 获取master节点token"></a>1. 获取master节点token</h1><p><img src="/2019/03/26/Kubernetes实战（6）部署Node节点/1.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># kubeadm token list</span></span><br><span class="line">TOKEN                     TTL       EXPIRES                     USAGES                   DESCRIPTION                                                EXTRA GROUPS</span><br><span class="line">ucb4zl.i6rr248tbw0km5iz   21h       2019-03-17T19:56:46+08:00   authentication,signing   The default bootstrap token generated by <span class="string">'kubeadm init'</span>.   system:bootstrappers:kubeadm:default-node-token</span><br></pre></td></tr></table></figure>
+<h1 id="2-kubeadm-join"><a href="#2-kubeadm-join" class="headerlink" title="2. kubeadm join"></a>2. kubeadm join</h1><p>命令格式：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm join --token &lt;token&gt; &lt;master-ip&gt;:&lt;master-port&gt; --discovery-token-ca-cert-hash sha256:&lt;<span class="built_in">hash</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>&lt;master-ip&gt;:&lt;master-port&gt; ，本文这里对应得是192.168.29.137:6443token，一般token两天就过期了，如果过期了你需要重新创建（查看token命令是kubeadm token list，创建token命令是kubeadm token create)，如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># kubeadm token list</span></span><br><span class="line"></span><br><span class="line">TOKEN                     TTL       EXPIRES                     USAGES                   DESCRIPTION                                                EXTRA GROUPS</span><br><span class="line"></span><br><span class="line">ucb4zl.i6rr248tbw0km5iz   20h       2019-03-17T19:56:46+08:00   authentication,signing   The default bootstrap token generated by <span class="string">'kubeadm init'</span>.   system:bootstrappers:kubeadm:default-node-token</span><br><span class="line"></span><br><span class="line">[root@localhost lilinian]<span class="comment"># kubeadm token create</span></span><br><span class="line"></span><br><span class="line">k8y7mv.7oe0e84dg0k0wct1</span><br></pre></td></tr></table></figure>
+<p>–discovery-token-ca-cert-hash，通过如下命令就可以得到</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost lilinian]<span class="comment"># openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2&gt;/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //'</span></span><br><span class="line"></span><br><span class="line">37c13ce23b09a83ddd499a0d8e25dd4b0108fbcabbcf4dfdaa56ae32bf19cb69</span><br></pre></td></tr></table></figure>
+<p>最后得到的join 命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm join 192.168.226.133:6443 --token k8y7mv.7oe0e84dg0k0wct1 --discovery-token-ca-cert-hash sha256:37c13ce23b09a83ddd499a0d8e25dd4b0108fbcabbcf4dfdaa56ae32bf19cb69</span><br></pre></td></tr></table></figure>
+<h1 id="3-加入集群"><a href="#3-加入集群" class="headerlink" title="3. 加入集群"></a>3. 加入集群</h1><p><img src="/2019/03/26/Kubernetes实战（6）部署Node节点/2.png" alt></p>
+<h2 id="3-1-关闭防火墙"><a href="#3-1-关闭防火墙" class="headerlink" title="3.1. 关闭防火墙"></a>3.1. 关闭防火墙</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
+<h2 id="3-2-禁止防火墙开机启动"><a href="#3-2-禁止防火墙开机启动" class="headerlink" title="3.2. 禁止防火墙开机启动"></a>3.2. 禁止防火墙开机启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br></pre></td></tr></table></figure>
+<h2 id="3-3-kubeadm-join"><a href="#3-3-kubeadm-join" class="headerlink" title="3.3. kubeadm join"></a>3.3. kubeadm join</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">[root@node1 k8s]<span class="comment"># kubeadm join 192.168.226.133:6443 --token k8y7mv.7oe0e84dg0k0wct1 --discovery-token-ca-cert-hash sha256:37c13ce23b09a83ddd499a0d8e25dd4b0108fbcabbcf4dfdaa56ae32bf19cb69</span></span><br><span class="line"></span><br><span class="line">[preflight] Running pre-flight checks</span><br><span class="line"></span><br><span class="line">  [WARNING SystemVerification]: this Docker version is not on the list of validated versions: 18.09.3. Latest validated version: 18.06</span><br><span class="line"></span><br><span class="line">  [WARNING Hostname]: hostname <span class="string">"node1"</span> could not be reached</span><br><span class="line"></span><br><span class="line">  [WARNING Hostname]: hostname <span class="string">"node1"</span>: lookup node1 on 192.168.226.2:53: no such host</span><br><span class="line"></span><br><span class="line">[discovery] Trying to connect to API Server <span class="string">"192.168.226.133:6443"</span></span><br><span class="line"></span><br><span class="line">[discovery] Created cluster-info discovery client, requesting info from <span class="string">"https://192.168.226.133:6443"</span></span><br><span class="line"></span><br><span class="line">[discovery] Requesting info from <span class="string">"https://192.168.226.133:6443"</span> again to validate TLS against the pinned public key</span><br><span class="line"></span><br><span class="line">[discovery] Cluster info signature and contents are valid and TLS certificate validates against pinned roots, will use API Server <span class="string">"192.168.226.133:6443"</span></span><br><span class="line"></span><br><span class="line">[discovery] Successfully established connection with API Server <span class="string">"192.168.226.133:6443"</span></span><br><span class="line"></span><br><span class="line">[join] Reading configuration from the cluster...</span><br><span class="line"></span><br><span class="line">[join] FYI: You can look at this config file with <span class="string">'kubectl -n kube-system get cm kubeadm-config -oyaml'</span></span><br><span class="line"></span><br><span class="line">[kubelet] Downloading configuration <span class="keyword">for</span> the kubelet from the <span class="string">"kubelet-config-1.13"</span> ConfigMap <span class="keyword">in</span> the kube-system namespace</span><br><span class="line"></span><br><span class="line">[kubelet-start] Writing kubelet configuration to file <span class="string">"/var/lib/kubelet/config.yaml"</span></span><br><span class="line"></span><br><span class="line">[kubelet-start] Writing kubelet environment file with flags to file <span class="string">"/var/lib/kubelet/kubeadm-flags.env"</span></span><br><span class="line"></span><br><span class="line">[kubelet-start] Activating the kubelet service</span><br><span class="line"></span><br><span class="line">[tlsbootstrap] Waiting <span class="keyword">for</span> the kubelet to perform the TLS Bootstrap...</span><br><span class="line"></span><br><span class="line">[patchnode] Uploading the CRI Socket information <span class="string">"/var/run/dockershim.sock"</span> to the Node API object <span class="string">"node1"</span> as an annotation</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">This node has joined the cluster:</span><br><span class="line"></span><br><span class="line">\* Certificate signing request was sent to apiserver and a response was received.</span><br><span class="line"></span><br><span class="line">\* The Kubelet was informed of the new secure connection details.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Run <span class="string">'kubectl get nodes'</span> on the master to see this node join the cluster.</span><br></pre></td></tr></table></figure>
+<h1 id="4-问题总结"><a href="#4-问题总结" class="headerlink" title="4. 问题总结"></a>4. 问题总结</h1><h2 id="4-1-Node一直处于notReady状态？"><a href="#4-1-Node一直处于notReady状态？" class="headerlink" title="4.1. Node一直处于notReady状态？"></a>4.1. Node一直处于notReady状态？</h2><p>主要有两个原因：</p>
+<p>1、启动kubelet的时候，会pull两个镜像(gcr.io/**)，因为GFW的存在，不能成功pull，所以要自己找到这两个docker镜像：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gcr.io/google_containers/pause-amd64:3.0</span><br><span class="line"></span><br><span class="line">gcr.io/google_containers/kube-proxy-amd64:v1.6.1</span><br></pre></td></tr></table></figure>
+<p>2、 使用Kubeadm工具搭建的Kubernetes集群，已经默认集成了安全策略，所以要将Master Node节点/etc/kubernetes/pki下的所有文件复制到Minion Node相同目录下一份。所以在Master Node上执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp /etc/kubernetes/pki/* root@&#123;minion-ip&#125;:/etc/kubernetes/pki</span><br></pre></td></tr></table></figure>
+<h2 id="4-2-The-connection-to-the-server-localhost-8080-was-refused-did-you-specify-the-right-host-or-port"><a href="#4-2-The-connection-to-the-server-localhost-8080-was-refused-did-you-specify-the-right-host-or-port" class="headerlink" title="4.2. The connection to the server localhost:8080 was refused - did you specify the right host or port?"></a>4.2. The connection to the server localhost:8080 was refused - did you specify the right host or port?</h2><p>出现这个问题的原因是kubectl命令需要使用kubernetes-admin来运行，解决方法如下，将主节点中的【/etc/kubernetes/admin.conf】文件拷贝到从节点相同目录下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scp /etc/kubernetes/admin.conf root@&#123;minion-ip&#125;:/etc/kubernetes/admin.conf</span><br></pre></td></tr></table></figure>
+<p>然后配置环境变量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"export KUBECONFIG=/etc/kubernetes/admin.conf"</span> &gt;&gt; ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>立即生效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<p>接着再运行kubectl命令就OK了</p>
+<h1 id="5-查看集群状态"><a href="#5-查看集群状态" class="headerlink" title="5. 查看集群状态"></a>5. 查看集群状态</h1><p><img src="/2019/03/26/Kubernetes实战（6）部署Node节点/3.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost k8s]<span class="comment"># kubectl get nodes</span></span><br><span class="line"></span><br><span class="line">NAME                    STATUS   ROLES    AGE   VERSION</span><br><span class="line"></span><br><span class="line">localhost.localdomain   Ready    master   56m   v1.13.4</span><br><span class="line"></span><br><span class="line">node1                   Ready    &lt;none&gt;   43m   v1.13.4</span><br><span class="line"></span><br><span class="line">[root@localhost k8s]<span class="comment">#</span></span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -232,7 +239,7 @@
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -245,335 +252,113 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://anutaisland.github.io/2019/03/26/Kubernetes实战（6）部署Node节点/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/26/Kubernetes实战（5）安装Dashboard/" class="archive-article-date">
-  	<time datetime="2019-03-26T03:06:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-26</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/03/26/Kubernetes实战（7）发布应用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Kubernetes实战（7）发布应用
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/03/26/Kubernetes实战（5）安装Dashboard/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Kubernetes实战（5）安装Dashboard</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/26/Kubernetes实战（5）安装Dashboard/">Kubernetes实战（5）安装Dashboard</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">kubernetes</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/从单体到容器-互联网架构演化之路//" class="article-tag-list-link color2">从单体到容器-互联网架构演化之路</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/26/Kubernetes实战（4）部署Master节点/" class="archive-article-date">
-  	<time datetime="2019-03-26T01:21:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/26/Kubernetes实战（4）部署Master节点/">Kubernetes实战（4）部署Master节点</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">kubernetes</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/从单体到容器-互联网架构演化之路//" class="article-tag-list-link color2">从单体到容器-互联网架构演化之路</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/24/Kubernetes实战（3）安装Kubernetes/" class="archive-article-date">
-  	<time datetime="2019-03-24T14:30:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/24/Kubernetes实战（3）安装Kubernetes/">Kubernetes实战（3）安装Kubernetes</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">kubernetes</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/从单体到容器-互联网架构演化之路//" class="article-tag-list-link color2">从单体到容器-互联网架构演化之路</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/24/Kubernetes实战（2）安装Docker-CE/" class="archive-article-date">
-  	<time datetime="2019-03-24T10:19:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/24/Kubernetes实战（2）安装Docker-CE/">Kubernetes实战（2）安装Docker-CE</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">kubernetes</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/从单体到容器-互联网架构演化之路//" class="article-tag-list-link color2">从单体到容器-互联网架构演化之路</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/24/Kubernetes实战（1）安装CentOS/" class="archive-article-date">
-  	<time datetime="2019-03-24T05:49:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/24/Kubernetes实战（1）安装CentOS/">Kubernetes实战（1）安装CentOS</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">kubernetes</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/从单体到容器-互联网架构演化之路//" class="article-tag-list-link color2">从单体到容器-互联网架构演化之路</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/24/Kubernetes实战-提纲/" class="archive-article-date">
-  	<time datetime="2019-03-24T05:09:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/24/Kubernetes实战-提纲/">Kubernetes实战-提纲</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">kubernetes</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">docker</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/从单体到容器-互联网架构演化之路//" class="article-tag-list-link color2">从单体到容器-互联网架构演化之路</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -596,9 +381,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
